@@ -11,7 +11,14 @@
     "mocha": "^2.4.5",
     "mongodb": "^2.1.16",
     "morgan": "^1.7.0",
-    "object-assign":"4.1.0"
+    "object-assign":"4.1.0",
+	"body-parser": "^1.5.1",
+	"mongoose": "^5.1.7",
+	"csprng" : "^0.1.1",
+	"connect": "^3.6.6",
+	"nodemailer": "^4.6.7",
+	"crypto": "^1.0.1",
+	"gravatar":"^1.0.6"
   },
   "engine": {
     "node": "*",
@@ -23,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/openshift/nodejs-ex.git"
+    "url": "http://github.com/honopg/nodejs-ex.git"
   },
-  "author": "Steve Speicher <sspeiche@gmail.com>",
+  "author": "",
   "license": "CC-BY-1.0",
   "bugs": {
-    "url": "http://github.com/openshift/nodejs-ex/issues"
+    "url": "http://github.com/honopg/nodejs-ex/issues"
   },
-  "homepage": "http://github.com/openshift/nodejs-ex"
+  "homepage": "http://github.com/honopg/nodejs-ex"
 }
