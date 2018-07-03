@@ -12,7 +12,7 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ipaddress   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 	
 // Conectar a la base de datos
-var connection_string = '127.0.0.1:27017/node-android';
+/*var connection_string = '127.0.0.1:27017/node-android';
 // if OPENSHIFT env variables are present, use the available connection info:
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
@@ -21,7 +21,12 @@ if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
   process.env.OPENSHIFT_APP_NAME;
 }
-mongoose.connect('mongodb://'+connection_string);
+//mongoose.connect('mongodb://'+connection_string);
+mongoose.connect('mongodb://'+connection_string).then(() => {
+console.log("Connected to Database");
+}).catch((err) => {
+    console.log("Not Connected to Database ERROR! ", err);
+});*/
 
 // Configuration
 var path = require('path');
@@ -52,6 +57,10 @@ var users = express.Router();
 	app.use('/',users);
  
 require('./routes/routes.js')(app);
+
+app.get('/process',function (req, res){
+	res.json(process.env);
+});
 
 app.listen(port, ipaddress, function() {
     console.log('Server running on http://%s:%s', ipaddress, port);
