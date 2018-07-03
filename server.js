@@ -2,10 +2,10 @@
  * Module dependencies.
  */
 var express  = require('express');
-var connect = require('connect');
+//var connect = require('connect');
 var app      = express();
 var mongoose = require('mongoose');
-var list = require('config/list');
+//var list = require('config/list');
   
 
 var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080,
@@ -30,17 +30,17 @@ console.log("Connected to Database");
 
 // Configuration
 var path = require('path');
-var logger = require('morgan');
+//var logger = require('morgan');
 var bodyParser = require('body-parser');
 app.use(express.static(path.join(__dirname + '/public')));
 //app.use(express.static(path.join(__dirname + '/views'))); // Para ver el index
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
  
  
 // Routes
-var users = express.Router();
+/*var users = express.Router();
 
 	users.route('/users').get(list.findAllUsers)
 	users.route('/users/api').get(list.findAllUsersSubj)
@@ -56,13 +56,14 @@ var users = express.Router();
 	users.route('/users/getEmail/:id').post(list.getEmailById)
 	app.use('/',users);
  
-require('./routes/routes.js')(app);
+require('./routes/routes.js')(app);*/
 
 app.get('/process',function (req, res){
 	res.json(process.env);
 });
 
-app.listen(port, ipaddress, function() {
+app.listen(port,ipaddress);
+/*app.listen(port, ipaddress, function() {
     console.log('Server running on http://%s:%s', ipaddress, port);
-});
+});*/
 
