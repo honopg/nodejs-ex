@@ -8,8 +8,8 @@ var mongoose = require('mongoose');
 var list = require('config/list');
   
 
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    ipaddress   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ipaddress   =  process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 	
 // Conectar a la base de datos
 /*var connection_string = '127.0.0.1:27017/node-android';
