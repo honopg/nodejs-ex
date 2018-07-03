@@ -10,6 +10,8 @@ var mongoose = require('mongoose');
 
 var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ipaddress   =  process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+	var conecctionString= process.env.OPENSHIFT_MONGODB_DB_URL || 'mongodb://127.0.0.1:27017/node-android';
+	mongoose.connect(conecctionString);
 	
 // Conectar a la base de datos
 /*var connection_string = '127.0.0.1:27017/node-android';
