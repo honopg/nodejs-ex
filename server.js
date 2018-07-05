@@ -10,7 +10,7 @@ var webSiteSchema = new mongoose.Schema({
 	created: {type: Date, default: Date.now}
 },{collection:'website'});
 var webSiteModel = mongoose.model('webSite',webSiteSchema);
-var website1= new webSiteModel({name: "web1"});
+var website= new webSiteModel({name: "web1"});
 website.save();
 
 app.use(express.static(__dirname+'/public'));
