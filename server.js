@@ -4,9 +4,9 @@ const mongoose = require('mongoose');
 //const MongoClient = require('mongodb').MongoClient;
 const app = require('./app');
 const config = require('./config');
-
+const connection_string = null;
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
-  const connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+  connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
   process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
   process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
   process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
