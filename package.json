@@ -1,17 +1,28 @@
 {
-  "name": "server-app",
-  "version": "1.0.0",
-  "description": "Node.js - mongoDB sample a",
+  "name": "nodejs-ex",
+  "version": "0.0.1",
+  "description": "Node.js sample app for OpenShift 3",
   "main": "server.js",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.3",
-    "crypto": "^1.0.1",
-    "express": "^4.16.3",
-    "jwt-simple": "^0.5.1",
-    "moment": "^2.22.2",
-    "mongoose": "^5.2.1"
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "mongodb": "^2.1.16",
+    "morgan": "^1.7.0",
+    "object-assign":"4.1.0",
+	"body-parser": "^1.5.1",
+	"mongoose": "^5.1.7",
+	"csprng" : "^0.1.1",
+	"connect": "^3.6.6",
+	"nodemailer": "^4.6.7",
+	"crypto": "^1.0.1",
+	"gravatar":"^1.0.6"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
   },
   "scripts": {
     "start": "node server.js"
@@ -20,13 +31,10 @@
     "type": "git",
     "url": "http://github.com/honopg/nodejs-ex.git"
   },
-  "author": "Honorio Prieto",
-  "license": "MIT",
+  "author": "",
+  "license": "CC-BY-1.0",
   "bugs": {
     "url": "http://github.com/honopg/nodejs-ex/issues"
   },
-  "homepage": "http://github.com/honopg/nodejs-ex",
-  "devDependencies": {
-    "nodemon": "^1.17.5"
-  }
+  "homepage": "http://github.com/honopg/nodejs-ex"
 }
